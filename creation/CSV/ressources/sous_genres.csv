@@ -1,0 +1,23 @@
+nom,parent1,parent2
+Action, None, None
+Aventure, None, None
+Animation, None, None
+Biographie, None, None
+Comédie, None, None
+Crime, None, None
+Documentaire, None, None
+Drame, None, None
+Familial, None, None
+Fantaisie, None, None
+Histoire, None, None
+Horreur, None, None
+Musical, None, None
+Mystère, None, None
+Romance, None, None
+Science-fiction, None, None
+Thriller, None, None
+Guerre, None, None
+Western, None, None
+Dystopie, Science-fiction, None
+SpaceOpera, Science-fiction, None
+HorrorComedie, Horreur, Comédie

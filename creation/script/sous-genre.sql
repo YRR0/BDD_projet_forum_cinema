@@ -1,0 +1,25 @@
+insert into projet.sous_genre (nom ,parent1,parent2) values 
+('Action',NULL,NULL),
+('Aventure', NULL, NULL),
+('Animation', NULL, NULL),
+('Biographie', NULL, NULL),
+('Comédie', NULL, NULL),
+('Crime', NULL, NULL),
+('Documentaire', NULL, NULL),
+('Drame', NULL, NULL),
+('Familial', NULL, NULL),
+('Fantaisie', NULL, NULL),
+('Histoire', NULL, NULL),
+('Horreur', NULL, NULL),
+('Musical', NULL, NULL),
+('Mystère', NULL, NULL),
+('Romance', NULL, NULL),
+('Science-fiction', NULL, NULL),
+('Thriller', NULL, NULL),
+('Guerre', NULL, NULL),
+('Western', NULL, NULL),
+('Dystopie', 'Science-fiction', NULL),
+('SpaceOpera', 'Science-fiction', NULL),
+('HorrorComedie', 'Horreur', 'Comédie')
+
+

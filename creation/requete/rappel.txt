@@ -1,0 +1,32 @@
+
+requête 6 - Explications :
+
+    Sous-requêtes corrélées :
+        Sélectionne les logins des utilisateurs où il n'existe pas de follower pour cet utilisateur.
+        NOT EXISTS vérifie l'absence de tout enregistrement dans la table projet.Follow où f.suivi correspond au logins de l'utilisateur.
+
+    Agrégation :
+        Utilise une jointure externe gauche (LEFT JOIN) pour lier chaque utilisateur aux followers potentiels.
+        GROUP BY regroupe par login d'utilisateur.
+        HAVING COUNT(f.suiveur) = 0 filtre les utilisateurs qui n'ont aucun follower, c'est-à-dire où le compte de f.suiveur est zéro.
+
+   1 Requête sur au moins trois tables : Cette requête combine les utilisateurs, les publications et les catégories.
+   2 Auto Jointure : Trouve des artistes similaires en termes de sexe et de nombre d'Oscars. La seconde requête trouve des films du même genre avec des titres différents.
+   3 Sous-requête corrélée : Sélectionne les utilisateurs suivis par au moins un autre utilisateur.
+   4 Sous-requête dans le FROM : Compte les followers pour chaque utilisateur.
+   5 Sous-requête dans le WHERE : Sélectionne les utilisateurs suivis par quelqu'un.
+   6 Agrégats avec GROUP BY et HAVING : Trouve les artistes avec plus de 9 Oscars.
+   7 Calcul de deux agrégats : Pour chaque réalisateur, calcule le maximum et la moyenne des entrées de ses films.
+   8 Jointure externe : Compte les réactions par artiste, même s'il n'y en a pas.
+   9 Condition de totalité avec sous-requêtes corrélées et agrégation : Trouve les utilisateurs sans followers.
+   10 Requêtes renvoyant des résultats différents à cause de NULLs : Utilise INTERSECT et DISTINCT, avec des modifications pour gérer les NULLs.
+   11 Requête récursive : Cherche les commentaires récursivement à partir d'un commentaire spécifique.
+   12 Requête utilisant le fenêtrage : Trouve les 10 lieux d'événements les plus populaires chaque mois en 2024.
+   13 Recommandation d'événements : Basée sur les événements suivis par les amis.
+   14 Événements intéressés : Sélectionne les événements suivis par un utilisateur spécifique.
+   15 Recommandation de publications : Basée sur les sujets consultés par l'utilisateur.
+   16 Score de recommandation : Calculé en fonction de la similarité des lieux et des organisateurs.
+   17 Meilleurs événements : Basé sur le score de similarité.
+   18 Recommandation de films : Basée sur les films aimés par les utilisateurs suivis.
+   19 Événements suivis : Basée sur l'historique des événements suivis par l'utilisateur.
+   20 Recommandation de publications : Basée sur les publications aimées par l'utilisateur et son réseau.
